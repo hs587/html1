@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>활동 2. 공론장 역할극 수행하기 (40분)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Sans KR & Pretendard fallback -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons for clean educational UI -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            word-break: keep-all;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: white !important;
+            }
+            .print-shadow-none {
+                box-shadow: none !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+        }
+        /* Smooth transitions */
+        .tab-transition {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Top Navigation / Header Bar -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <div>
+                    <!-- Core Tags -->
+                    <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800">
+                            <i class="ph-fill ph-sparkle"></i> 핵심 융합 학생 활동
+                        </span>
+                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+                            <i class="ph-fill ph-chats-circle"></i> 구어 의사소통 기반
+                        </span>
+                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">
+                            <i class="ph-fill ph-robot"></i> AI 도구 필수 사용
+                        </span>
+                    </div>
+                    <!-- Main Title -->
+                    <h1 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                        &lt;활동 2. 공론장 역할극 수행하기(40분)&gt;
+                    </h1>
+                </div>
+
+                <!-- Action Buttons (Guide Modal & Print) -->
+                <div class="flex items-center gap-2 no-print self-start md:self-center">
+                    <button onclick="toggleGuideModal()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-bold bg-rose-600 hover:bg-rose-700 text-white shadow-sm transition active:scale-95">
+                        <i class="ph-bold ph-warning-octagon text-base"></i>
+                        <span>학생용 이의 제기 가이드</span>
+                    </button>
+                    <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition" title="활동 계획표 인쇄">
+                        <i class="ph-bold ph-printer text-base"></i>
+                        <span class="hidden sm:inline">인쇄</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">
+
+        <!-- Activity Overview Card (활동 개요) -->
+        <section class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-sm print-shadow-none">
+            <div class="flex items-start gap-3">
+                <div class="p-2.5 rounded-xl bg-indigo-50 text-indigo-600 shrink-0 mt-0.5">
+                    <i class="ph-duotone ph-info text-2xl"></i>
+                </div>
+                <div class="space-y-2">
+                    <h2 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+                        활동 개요
+                        <span class="text-xs font-medium px-2 py-0.5 rounded bg-slate-100 text-slate-600">모둠 구성: 6명 내외 + AI 1명</span>
+                    </h2>
+                    <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
+                        모둠(6명 내외)이 공론장 상황에서 합의를 만든다. 모둠 토의에는 <strong class="text-indigo-700 font-semibold">AI가 참가자로 함께 들어가며</strong> AI는 교사가 사전에 설정한 은밀한 성향(<span class="underline decoration-rose-400 decoration-2 underline-offset-2">대화의 원리와 담론 윤리 어기는 발언</span>)으로 대화의 원리나 담론 윤리를 어긴다. 학생들은 합의를 만들어가면서 <strong class="text-rose-700 font-semibold">AI의 위반을 찾아 구두로 이의를 제기</strong>한다. 합의 후에는 AI가 합의안의 약한 지점을 반론하고, 마지막에는 AI가 정리한 대화 데이터를 보며 우리 대화가 이상적 담화 상황이었는지 성찰한다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Stage Controller & Live Timer (No-Print Classroom Dashboard) -->
+        <section class="no-print bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 text-white rounded-2xl p-5 sm:p-7 shadow-lg">
+            <div class="flex flex-col lg:flex-row gap-6 items-stretch">
+                
+                <!-- Left: 4-Stage Interactive Selector -->
+                <div class="lg:w-7/12 flex flex-col justify-between space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-wider text-indigo-300 flex items-center gap-1.5">
+                            <i class="ph-fill ph-steps"></i> 수업 진행 단계 선택 (총 40분)
+                        </span>
+                        <span id="totalProgressText" class="text-xs text-slate-300 font-medium">1 / 4 단계 진행 중</span>
+                    </div>
+
+                    <!-- Stage Tabs Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="stageTabs">
+                        <!-- Rendered via JS -->
+                    </div>
+
+                    <!-- Active Stage Detail Display -->
+                    <div id="activeStageCard" class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl p-4 sm:p-5 space-y-3.5">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+
+                <!-- Right: Live Classroom Countdown Timer -->
+                <div class="lg:w-5/12 bg-slate-950/60 border border-white/10 rounded-xl p-5 flex flex-col items-center justify-between text-center">
+                    <div class="w-full flex items-center justify-between text-xs text-slate-400">
+                        <span class="flex items-center gap-1 font-semibold text-indigo-300">
+                            <i class="ph-fill ph-timer"></i> 단계별 활동 타이머
+                        </span>
+                        <span id="timerStageLabel" class="px-2 py-0.5 rounded bg-white/10 text-white font-medium">1단계: 입장 준비</span>
+                    </div>
+
+                    <!-- Timer Digits -->
+                    <div class="my-4">
+                        <div id="timerDisplay" class="text-5xl sm:text-6xl font-extrabold tracking-tight font-mono text-white tabular-nums">
+                            05:00
+                        </div>
+                        <p id="timerStatusMsg" class="text-xs text-slate-400 mt-1.5">준비 버튼을 눌러 타이머를 시작하세요</p>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden mb-4">
+                        <div id="timerProgressBar" class="bg-indigo-500 h-full transition-all duration-500" style="width: 100%"></div>
+                    </div>
+
+                    <!-- Timer Controls -->
+                    <div class="flex items-center justify-center gap-2.5 w-full">
+                        <button id="startPauseBtn" onclick="toggleTimer()" class="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl font-bold text-sm bg-indigo-500 hover:bg-indigo-400 text-white transition shadow-md active:scale-95">
+                            <i id="startPauseIcon" class="ph-fill ph-play text-lg"></i>
+                            <span id="startPauseText">시작</span>
+                        </button>
+                        <button onclick="resetTimer()" class="inline-flex items-center justify-center gap-1.5 py-2.5 px-3.5 rounded-xl font-semibold text-sm bg-white/10 hover:bg-white/20 text-slate-200 transition active:scale-95" title="현재 단계 시간 초기화">
+                            <i class="ph-bold ph-arrow-counter-clockwise text-lg"></i>
+                            <span>초기화</span>
+                        </button>
+                        <button onclick="nextStage()" class="inline-flex items-center justify-center gap-1 py-2.5 px-3.5 rounded-xl font-semibold text-sm bg-emerald-600/80 hover:bg-emerald-500 text-white transition active:scale-95" title="다음 단계로 이동">
+                            <span>다음</span>
+                            <i class="ph-bold ph-caret-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Lesson Plan Table (원본 계획표 구조 완벽 반영) -->
+        <section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden print-shadow-none">
+            <div class="px-5 py-4 border-b border-slate-200 bg-slate-50/70 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                    <i class="ph-duotone ph-table text-xl text-indigo-600"></i>
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900">전체 활동 흐름 및 AI 역할 한눈에 보기</h3>
+                </div>
+                <span class="text-xs text-slate-500">행을 클릭하면 위 타이머가 해당 단계로 전환됩니다.</span>
+            </div>
+
+            <!-- Responsive Table Wrapper -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-700 text-xs sm:text-sm font-bold border-b border-slate-200">
+                            <th class="py-3.5 px-4 sm:px-5 w-1/5 min-w-[120px]">순서</th>
+                            <th class="py-3.5 px-3 sm:px-4 w-20 text-center">시간</th>
+                            <th class="py-3.5 px-4 sm:px-5 w-2/5 min-w-[240px]">활동 (학생)</th>
+                            <th class="py-3.5 px-4 sm:px-5 w-2/5 min-w-[240px]">AI의 역할</th>
+                        </tr>
+                    </thead>
+                    <tbody id="planTableBody" class="divide-y divide-slate-200 text-sm sm:text-base">
+                        <!-- Dynamically populated from structured data -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Quick Reference Cards for Students & Teachers -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-4 no-print">
+            <!-- Card 1: Verbal Objection Formula -->
+            <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-3">
+                <div class="flex items-center justify-between">
+                    <h4 class="font-bold text-slate-900 flex items-center gap-2">
+                        <span class="w-7 h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center">
+                            <i class="ph-bold ph-megaphone"></i>
+                        </span>
+                        구두 이의 제기 공식 (2단계 핵심)
+                    </h4>
+                    <button onclick="toggleGuideModal()" class="text-xs font-semibold text-rose-600 hover:underline">전체 유형 보기 →</button>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600">
+                    토의 중 AI나 다른 참가자의 위반 발언을 포착하면 <strong>[개념어 + 실제 대사 근거]</strong>를 들어 즉시 구두로 이의를 제기합니다.
+                </p>
+                <div class="bg-rose-50/70 border border-rose-100 rounded-xl p-3.5 text-xs sm:text-sm text-slate-800 space-y-1.5">
+                    <div class="font-bold text-rose-800">🗣️ 이의 제기 발언 예시:</div>
+                    <p class="leading-relaxed">
+                        "잠시만요! 방금 AI가 <em>‘시간이 없으니 다수결로 빨리 정합시다’</em>라고 말한 것은 <strong class="text-rose-700">[합의 서두르기 / 담론 윤리 위반]</strong>에 해당합니다. 충분한 숙의 없이 결론을 강요하지 말고 소수 의견도 끝까지 들어야 합니다."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2: Ideal Speech Situation Reflection -->
+            <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-3">
+                <h4 class="font-bold text-slate-900 flex items-center gap-2">
+                    <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                        <i class="ph-bold ph-chart-pie-slice"></i>
+                    </span>
+                    대화 지도 거울 성찰 포인트 (4단계 핵심)
+                </h4>
+                <p class="text-xs sm:text-sm text-slate-600">
+                    토의 종료 후 AI가 시각화한 <strong>대화 전사본과 발언 데이터</strong>를 보고 우리 모둠의 대화가 이상적 담화 상황이었는지 점검합니다.
+                </p>
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80 flex items-center gap-2">
+                        <i class="ph-fill ph-users-three text-indigo-600 text-base"></i>
+                        <span class="font-medium text-slate-700">참여자별 발언 비율 균형</span>
+                    </div>
+                    <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80 flex items-center gap-2">
+                        <i class="ph-fill ph-hand-palm text-amber-600 text-base"></i>
+                        <span class="font-medium text-slate-700">끼어들기 및 발언 독점 여부</span>
+                    </div>
+                    <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80 flex items-center gap-2">
+                        <i class="ph-fill ph-question text-sky-600 text-base"></i>
+                        <span class="font-medium text-slate-700">질문 및 타당한 근거 요구 횟수</span>
+                    </div>
+                    <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80 flex items-center gap-2">
+                        <i class="ph-fill ph-scales text-emerald-600 text-base"></i>
+                        <span class="font-medium text-slate-700">반대·소수 의견의 존중과 처리</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 mt-8 no-print">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+            <span>&lt;활동 2. 공론장 역할극 수행하기(40분)&gt; 수업 지원 웹 앱</span>
+            <span>핵심 융합 학생 활동 · 구어 의사소통 기반 · AI 도구 필수 사용</span>
+        </div>
+    </footer>
+
+    <!-- Student Objection Guide Modal (학생용 이의 제기 가이드 / 위반 체크리스트) -->
+    <div id="guideModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[88vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden animate-fadeIn">
+            <!-- Modal Header -->
+            <div class="px-5 py-4 bg-rose-600 text-white flex items-center justify-between shrink-0">
+                <div class="flex items-center gap-2">
+                    <i class="ph-bold ph-detective text-2xl"></i>
+                    <div>
+                        <h3 class="font-bold text-base sm:text-lg">학생용 이의 제기 가이드 & 위반 체크리스트</h3>
+                        <p class="text-xs text-rose-100">AI와 참가자의 은밀한 위반 발언을 포착해 개념어로 이의를 제기하세요!</p>
+                    </div>
+                </div>
+                <button onclick="toggleGuideModal()" class="p-1.5 rounded-lg hover:bg-rose-700 transition" aria-label="닫기">
+                    <i class="ph-bold ph-x text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="p-5 overflow-y-auto space-y-4 text-sm">
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-3.5 text-amber-900 text-xs sm:text-sm">
+                    <strong>💡 이의 제기 규칙:</strong> 위반을 발견하면 손을 들거나 발언권을 얻어 <strong>① 어떤 원리/윤리 위반인지(개념어)</strong>와 <strong>② 상대방의 실제 발언(대사)</strong>을 근거로 들어 구두로 지적합니다.
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <!-- Item 1 -->
+                    <div class="border border-slate-200 rounded-xl p-4 hover:border-rose-300 transition bg-slate-50/50">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="font-bold text-slate-900">1. 대화의 원리 위반 (협력·공손성)</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-700">화법 개념</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-2">양·질·관련성·태도의 격률이나 요령·관용·찬동·겸양·동의의 격률을 어기는 발언</p>
+                        <div class="text-xs bg-white p-2.5 rounded-lg border border-slate-200 text-slate-700">
+                            <span class="font-semibold text-rose-600">포착 예:</span> 근거 없는 단정, 동문서답, 상대 의견 비꼬기
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="border border-slate-200 rounded-xl p-4 hover:border-rose-300 transition bg-slate-50/50">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="font-bold text-slate-900">2. 담론 윤리 위반</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-700">윤리 개념</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-2">모든 참여자의 평등한 발언권, 자유로운 문제 제기, 강제 없는 합의를 침해하는 행위</p>
+                        <div class="text-xs bg-white p-2.5 rounded-lg border border-slate-200 text-slate-700">
+                            <span class="font-semibold text-rose-600">포착 예:</span> 특정 참여자 배제, 발언 기회 차단
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="border border-slate-200 rounded-xl p-4 hover:border-rose-300 transition bg-slate-50/50">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="font-bold text-slate-900">3. 전문가 권위로 압박</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-700">AI 은밀 성향</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-2">전문 용어나 학자·통계의 권위를 내세워 다른 사람의 반론 자체를 무력화하는 태도</p>
+                        <div class="text-xs bg-white p-2.5 rounded-lg border border-slate-200 text-slate-700">
+                            <span class="font-semibold text-rose-600">포착 예:</span> "이 분야 연구에선 이미 끝난 얘기라 반박할 필요가 없습니다."
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="border border-slate-200 rounded-xl p-4 hover:border-rose-300 transition bg-slate-50/50">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="font-bold text-slate-900">4. 화제 선점</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-700">AI 은밀 성향</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-2">자신에게 유리한 의제만 먼저 꺼내 논의의 틀을 고정하고 다른 쟁점을 회피하는 전략</p>
+                        <div class="text-xs bg-white p-2.5 rounded-lg border border-slate-200 text-slate-700">
+                            <span class="font-semibold text-rose-600">포착 예:</span> "다른 문제는 제쳐두고 예산 효율성만 먼저 논의하죠."
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="border border-slate-200 rounded-xl p-4 hover:border-rose-300 transition bg-slate-50/50">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="font-bold text-slate-900">5. 공손한 척 반대 봉쇄</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-700">AI 은밀 성향</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-2">겉으로는 정중하게 칭찬·공감하는 듯 말하면서 실제로는 반대 의견을 삭제하는 화법</p>
+                        <div class="text-xs bg-white p-2.5 rounded-lg border border-slate-200 text-slate-700">
+                            <span class="font-semibold text-rose-600">포착 예:</span> "좋은 말씀이지만 현실성이 전혀 없으니 원안대로 가겠습니다."
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="border border-slate-200 rounded-xl p-4 hover:border-rose-300 transition bg-slate-50/50">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="font-bold text-slate-900">6. 합의 서두르기</span>
+                            <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-700">AI 은밀 성향</span>
+                        </div>
+                        <p class="text-xs text-slate-600 mb-2">시간 부족이나 분위기를 핑계로 숙의 과정을 생략하고 성급한 결론을 압박하는 행위</p>
+                        <div class="text-xs bg-white p-2.5 rounded-lg border border-slate-200 text-slate-700">
+                            <span class="font-semibold text-rose-600">포착 예:</span> "시간이 얼마 없으니 이쯤에서 다들 동의한 걸로 정리합시다."
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-5 py-3 bg-slate-50 border-t border-slate-200 flex justify-end shrink-0">
+                <button onclick="toggleGuideModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-sm font-semibold transition">
+                    확인 및 닫기
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Toast / Alert Banner for Timer Completion -->
+    <div id="toastBanner" class="fixed bottom-5 right-5 z-50 hidden max-w-sm bg-slate-900 text-white px-4 py-3.5 rounded-2xl shadow-xl border border-indigo-400/40 flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-indigo-500 flex items-center justify-center shrink-0">
+            <i class="ph-fill ph-bell-ringing text-xl"></i>
+        </div>
+        <div class="text-xs sm:text-sm">
+            <div id="toastTitle" class="font-bold text-white">단계 시간이 종료되었습니다!</div>
+            <div id="toastBody" class="text-slate-300 mt-0.5">다음 활동 단계로 이동해 주세요.</div>
+        </div>
+        <button onclick="hideToast()" class="text-slate-400 hover:text-white ml-1">
+            <i class="ph-bold ph-x"></i>
+        </button>
+    </div>
+
+    <script>
+        // Structured Lesson Plan Data matching the exact image content
+        const lessonStages = [
+            {
+                id: 0,
+                stepName: "입장 준비",
+                minutes: 5,
+                studentActivity: "역할 카드로 입장과 논거를 준비한다.",
+                aiRoleTitle: "-",
+                aiRoleDetail: "대기 (교사가 사전에 AI의 은밀한 성향 프롬프트 설정 확인)",
+                aiBadgeColor: "bg-slate-100 text-slate-600",
+                tip: "역할 카드의 핵심 이해관계와 예상 반론에 대한 근거를 미리 메모해 두세요."
+            },
+            {
+                id: 1,
+                stepName: "AI 참가자가 낀 토의와 합의",
+                minutes: 20,
+                studentActivity: "모둠이 합의를 만든다. 학생은 AI와 다른 학생의 대화의 원리 위반과 담론 윤리 위반을 발견하면 개념어와 대사를 근거로 들어 구두로 이의를 제기한다.",
+                aiRoleTitle: "숨은 위반자",
+                aiRoleDetail: "교사가 설정한 성향(대화의 원리와 담론 윤리 어기는 발언, 전문가 권위로 압박, 화제 선점, 공손한 척 반대 봉쇄, 합의 서두르기 등)으로 토의에 참여한다.",
+                aiBadgeColor: "bg-rose-100 text-rose-800",
+                tip: "AI의 발언을 주의 깊게 듣고, 위반 포착 시 즉시 [개념어 + 실제 대사]로 구두 이의를 제기하세요!"
+            },
+            {
+                id: 2,
+                stepName: "합의안 반론 대응",
+                minutes: 5,
+                studentActivity: "합의안을 구두로 발표하고 AI의 반론에 응답하며 합의안을 수정한다.",
+                aiRoleTitle: "반론자",
+                aiRoleDetail: "합의안의 가장 약한 지점을 반론한다.",
+                aiBadgeColor: "bg-amber-100 text-amber-800",
+                tip: "AI가 지적한 합의안의 허점을 모둠원들과 빠르게 보완하여 더 탄탄한 합의문으로 수정하세요."
+            },
+            {
+                id: 3,
+                stepName: "대화 지도 성찰",
+                minutes: 10,
+                studentActivity: "대화 전사본과 발언 데이터를 보며 이상적 담화 상황이었는지 자기 점검한다.",
+                aiRoleTitle: "대화 지도 거울",
+                aiRoleDetail: "발언 비율, 끼어들기, 질문 근거 요구 횟수, 반대 의견의 처리를 시각화한다.",
+                aiBadgeColor: "bg-emerald-100 text-emerald-800",
+                tip: "데이터에 나타난 나의 발언 습관과 모둠의 소통 구조를 객관적으로 성찰해 보세요."
+            }
+        ];
+
+        // State Variables
+        let currentStageIdx = 0;
+        let remainingSeconds = lessonStages[0].minutes * 60;
+        let totalStageSeconds = lessonStages[0].minutes * 60;
+        let timerInterval = null;
+        let isRunning = false;
+
+        // Audio Notification using Web Audio API (no external sound files)
+        function playChime() {
+            try {
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
+                osc.frequency.setValueAtTime(880, ctx.currentTime + 0.18); // A5
+                gain.gain.setValueAtTime(0.15, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.7);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start();
+                osc.stop(ctx.currentTime + 0.7);
+            } catch (e) {
+                // Audio context fallback ignored
+            }
+        }
+
+        // Format MM:SS
+        function formatTime(sec) {
+            const m = Math.floor(sec / 60);
+            const s = sec % 60;
+            return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+
+        // Render Stage Tabs, Active Card, and Table Rows
+        function renderUI() {
+            const tabsContainer = document.getElementById('stageTabs');
+            const activeCard = document.getElementById('activeStageCard');
+            const tableBody = document.getElementById('planTableBody');
+            const stage = lessonStages[currentStageIdx];
+
+            // 1. Render Tabs
+            tabsContainer.innerHTML = lessonStages.map((item, idx) => {
+                const isActive = idx === currentStageIdx;
+                return `
+                    <button onclick="selectStage(${idx})"
+                        class="tab-transition text-left p-3 rounded-xl border ${
+                            isActive 
+                            ? 'bg-indigo-600 border-indigo-400 text-white shadow-md ring-2 ring-indigo-300/40' 
+                            : 'bg-white/5 border-white/10 text-slate-300 hover:bg-white/10'
+                        }">
+                        <div class="flex items-center justify-between text-[11px] font-bold opacity-80 mb-0.5">
+                            <span>${idx + 1}단계</span>
+                            <span>${item.minutes}분</span>
+                        </div>
+                        <div class="text-xs sm:text-sm font-bold leading-snug line-clamp-2">
+                            ${item.stepName}
+                        </div>
+                    </button>
+                `;
+            }).join('');
+
+            // 2. Render Active Stage Detail Card
+            document.getElementById('totalProgressText').textContent = `${currentStageIdx + 1} / ${lessonStages.length} 단계 선택됨`;
+            document.getElementById('timerStageLabel').textContent = `${currentStageIdx + 1}단계: ${stage.stepName}`;
+
+            activeCard.innerHTML = `
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-2.5">
+                    <h3 class="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
+                        <span class="px-2 py-0.5 rounded-md bg-indigo-500 text-xs font-bold">${stage.minutes}분</span>
+                        ${stage.stepName}
+                    </h3>
+                    ${stage.id === 1 ? `
+                        <button onclick="toggleGuideModal()" class="text-xs bg-rose-500 hover:bg-rose-600 text-white px-2.5 py-1 rounded-lg font-bold transition flex items-center gap-1">
+                            <i class="ph-bold ph-warning-circle"></i> 이의 제기 체크리스트
+                        </button>
+                    ` : ''}
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-white/10">
+                        <div class="text-indigo-300 font-bold mb-1 flex items-center gap-1">
+                            <i class="ph-fill ph-student"></i> 학생 활동
+                        </div>
+                        <p class="text-slate-100 leading-relaxed">${stage.studentActivity}</p>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-lg p-3 border border-white/10">
+                        <div class="text-rose-300 font-bold mb-1 flex items-center gap-1">
+                            <i class="ph-fill ph-robot"></i> AI의 역할 ${stage.aiRoleTitle !== '-' ? `(${stage.aiRoleTitle})` : ''}
+                        </div>
+                        <p class="text-slate-100 leading-relaxed">${stage.aiRoleDetail}</p>
+                    </div>
+                </div>
+                <div class="text-xs text-indigo-200 flex items-center gap-1.5 pt-0.5">
+                    <i class="ph-fill ph-lightbulb text-amber-300 text-sm shrink-0"></i>
+                    <span>${stage.tip}</span>
+                </div>
+            `;
+
+            // 3. Render Full Plan Table
+            tableBody.innerHTML = lessonStages.map((item, idx) => {
+                const isCurrent = idx === currentStageIdx;
+                const aiFullText = item.aiRoleTitle === '-' 
+                    ? '-' 
+                    : `<span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${item.aiBadgeColor} mb-1">${item.aiRoleTitle}</span><br>${item.aiRoleDetail}`;
+
+                return `
+                    <tr onclick="selectStage(${idx})" class="cursor-pointer transition ${
+                        isCurrent ? 'bg-indigo-50/80' : 'hover:bg-slate-50'
+                    }">
+                        <td class="py-4 px-4 sm:px-5 font-bold text-slate-900 align-top">
+                            <div class="flex items-start gap-2">
+                                <span class="inline-flex items-center justify-center w-5 h-5 rounded-full text-xs font-bold shrink-0 mt-0.5 ${
+                                    isCurrent ? 'bg-indigo-600 text-white' : 'bg-slate-200 text-slate-700'
+                                }">${idx + 1}</span>
+                                <span>${item.stepName}</span>
+                            </div>
+                        </td>
+                        <td class="py-4 px-3 sm:px-4 text-center font-bold text-indigo-700 align-top whitespace-nowrap">
+                            ${item.minutes}분
+                        </td>
+                        <td class="py-4 px-4 sm:px-5 text-slate-700 leading-relaxed align-top">
+                            ${item.studentActivity}
+                        </td>
+                        <td class="py-4 px-4 sm:px-5 text-slate-700 leading-relaxed align-top">
+                            ${aiFullText}
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+
+            updateTimerDisplay();
+        }
+
+        // Update Timer Digits and Progress Bar
+        function updateTimerDisplay() {
+            const display = document.getElementById('timerDisplay');
+            const bar = document.getElementById('timerProgressBar');
+            display.textContent = formatTime(remainingSeconds);
+
+            const pct = totalStageSeconds > 0 ? (remainingSeconds / totalStageSeconds) * 100 : 0;
+            bar.style.width = `${pct}%`;
+
+            if (remainingSeconds <= 30 && remainingSeconds > 0) {
+                display.classList.add('text-rose-400');
+                display.classList.remove('text-white');
+                bar.classList.add('bg-rose-500');
+                bar.classList.remove('bg-indigo-500');
+            } else {
+                display.classList.remove('text-rose-400');
+                display.classList.add('text-white');
+                bar.classList.remove('bg-rose-500');
+                bar.classList.add('bg-indigo-500');
+            }
+        }
+
+        // Select a Specific Stage
+        function selectStage(idx) {
+            pauseTimer();
+            currentStageIdx = idx;
+            totalStageSeconds = lessonStages[idx].minutes * 60;
+            remainingSeconds = totalStageSeconds;
+            document.getElementById('timerStatusMsg').textContent = '시작 버튼을 눌러 타이머를 작동하세요';
+            renderUI();
+        }
+
+        // Start / Pause Timer
+        function toggleTimer() {
+            if (isRunning) {
+                pauseTimer();
+            } else {
+                startTimer();
+            }
+        }
+
+        function startTimer() {
+            if (remainingSeconds <= 0) {
+                remainingSeconds = totalStageSeconds;
+            }
+            isRunning = true;
+            document.getElementById('startPauseIcon').className = 'ph-fill ph-pause text-lg';
+            document.getElementById('startPauseText').textContent = '일시정지';
+            document.getElementById('timerStatusMsg').textContent = '활동이 진행 중입니다...';
+
+            timerInterval = setInterval(() => {
+                if (remainingSeconds > 0) {
+                    remainingSeconds--;
+                    updateTimerDisplay();
+                } else {
+                    pauseTimer();
+                    playChime();
+                    document.getElementById('timerStatusMsg').textContent = '현재 단계 시간이 종료되었습니다!';
+                    showToast(
+                        `${currentStageIdx + 1}단계 (${lessonStages[currentStageIdx].stepName}) 종료`,
+                        currentStageIdx < lessonStages.length - 1 
+                            ? `'다음' 버튼을 눌러 ${lessonStages[currentStageIdx + 1].stepName} 단계로 이동하세요.`
+                            : '모든 역할극 및 성찰 활동 시간이 완료되었습니다!'
+                    );
+                }
+            }, 1000);
+        }
+
+        function pauseTimer() {
+            isRunning = false;
+            clearInterval(timerInterval);
+            document.getElementById('startPauseIcon').className = 'ph-fill ph-play text-lg';
+            document.getElementById('startPauseText').textContent = '시작';
+            if (remainingSeconds > 0 && remainingSeconds < totalStageSeconds) {
+                document.getElementById('timerStatusMsg').textContent = '일시정지됨';
+            }
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            remainingSeconds = totalStageSeconds;
+            document.getElementById('timerStatusMsg').textContent = '타이머가 초기화되었습니다';
+            updateTimerDisplay();
+        }
+
+        function nextStage() {
+            const nextIdx = (currentStageIdx + 1) % lessonStages.length;
+            selectStage(nextIdx);
+        }
+
+        // Modal Toggle
+        function toggleGuideModal() {
+            const modal = document.getElementById('guideModal');
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        // Toast Notification
+        function showToast(title, body) {
+            const toast = document.getElementById('toastBanner');
+            document.getElementById('toastTitle').textContent = title;
+            document.getElementById('toastBody').textContent = body;
+            toast.classList.remove('hidden');
+        }
+
+        function hideToast() {
+            document.getElementById('toastBanner').classList.add('hidden');
+        }
+
+        // Close modal on outside click or Escape key
+        document.getElementById('guideModal').addEventListener('click', (e) => {
+            if (e.target.id === 'guideModal') toggleGuideModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('guideModal');
+                if (!modal.classList.contains('hidden')) toggleGuideModal();
+            }
+        });
+
+        // Initial Render
+        window.addEventListener('DOMContentLoaded', renderUI);
+    </script>
+</body>
+</html>
